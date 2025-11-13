@@ -16,8 +16,13 @@ export default function PostForm() {
         })
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData);
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <h2>Meow</h2>
             <div>
                 <label>Autore:</label>
@@ -52,6 +57,7 @@ export default function PostForm() {
                     Pubblico?
                 </label>
             </div>
+            <button type="submit">Invia</button>
         </form>
     )
 }
