@@ -20,6 +20,18 @@ export default function PostForm() {
                 <label>Titolo:</label>
                 <input type="text" name="title" />
             </div>
+
+            <div>
+                <label>Testo:</label>
+                <textarea name="body"></textarea>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" name="public" />
+                    Pubblico?
+                </label>
+            </div>
         </form>
     )
 }
