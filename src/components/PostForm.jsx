@@ -1,4 +1,7 @@
 import React, { useState } from "react"
+import axios from "axios";
+
+const API = "https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts"
 
 export default function PostForm() {
     const [formData, setFormData] = useState({
@@ -18,8 +21,16 @@ export default function PostForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+
+        axios.post(API, formData)
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            })
     }
+
 
     return (
         <form onSubmit={handleSubmit}>
