@@ -11,6 +11,15 @@ export default function PostForm() {
     return (
         <form>
             <h2>Meow</h2>
+            <div>
+                <label>Autore:</label>
+                <input type="text" name="author" />
+            </div>
+
+            <div>
+                <label>Titolo:</label>
+                <input type="text" name="title" />
+            </div>
         </form>
     )
 }
